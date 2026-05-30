@@ -1,21 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stopwatch</title>
+    <title>Modern Stopwatch</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="stopwatch">
-        <h1 id="displayTime">00:00:00</h1>
-        <div class="buttons">
-            <img src="stop.png" onclick="watchStop()" alt="">
-            <img src="ChatGPT_Image_May_13__2026__06_56_09_PM-removebg-preview.png" onclick="watchStart()" alt="">
-            <img src="reset.png" onclick="watchReset()" alt="">
+
+    <div class="container">
+
+        <!-- Decorative Images -->
+        <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" class="bg-left">
+        <img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png" class="bg-right">
+
+        <!-- Top Icon -->
+        <div class="top-icon">
+
+            <i class="fa-solid fa-stopwatch"></i>
+
+            <span class="plus plus-left">+</span>
+            <span class="plus plus-right">+</span>
+
         </div>
+
+        <!-- Heading -->
+        <h1>Stopwatch</h1>
+
+        <p class="subtitle">
+            Track your time. Stay focused. Achieve more.
+        </p>
+
+        <!-- Timer -->
+        <div class="timer-box">
+
+            <div class="time-box">
+                <span id="hours">00</span>
+                <small>Hours</small>
+            </div>
+
+            <div class="dots">:</div>
+
+            <div class="time-box">
+                <span id="minutes">00</span>
+                <small>Minutes</small>
+            </div>
+
+            <div class="dots">:</div>
+
+            <div class="time-box">
+                <span id="seconds">00</span>
+                <small>Seconds</small>
+            </div>
+
+        </div>
+
+        <!-- Controls -->
+        <div class="controls">
+
+            <!-- Reset -->
+            <div class="control">
+
+                <button class="btn white-btn" id="resetBtn">
+                    <i class="fa-solid fa-stop"></i>
+                </button>
+
+                <p>Reset</p>
+
+            </div>
+
+            <!-- Start -->
+            <div class="control">
+
+                <button class="btn play-btn" id="startBtn">
+                    <i class="fa-solid fa-play" id="playIcon"></i>
+                </button>
+
+                <p class="green" id="btnText">Start</p>
+
+            </div>
+
+            <!-- Lap -->
+            <div class="control">
+
+                <button class="btn white-btn" id="lapBtn">
+                    <i class="fa-solid fa-rotate-right"></i>
+                </button>
+
+                <p>Lap</p>
+
+            </div>
+
+        </div>
+
+        <!-- Lap Records -->
+        <div class="lap-container">
+
+            <div class="lap-header">
+
+                <h3>Lap Records</h3>
+
+                <span id="lapCountText">0 Laps</span>
+
+            </div>
+
+            <ul id="lapList">
+
+                <div class="empty-lap">
+                    No lap records yet
+                </div>
+
+            </ul>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+
+            <i class="fa-solid fa-heart"></i>
+
+            <p>
+                Designed & Developed by
+                <span>Kanwal Imran</span>
+            </p>
+
+        </div>
+
     </div>
 
     <script src="script.js"></script>
+
 </body>
+
 </html>
